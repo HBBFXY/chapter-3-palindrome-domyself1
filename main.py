@@ -1,11 +1,11 @@
-# 获取用户输入
-user_input = input("请输入一个5位数字：")
-# 严格验证输入是否为5位纯数字
-if len(user_input) != 5 or not user_input.isdigit():
-    print("输入错误，必须是5位纯数字")
+# 回文数判断程序
+n = input("请输入一个5位数字：")
+# 判断输入是否为纯数字，且长度是否为5
+if not n.isdigit() or len(n) != 5:
+    print("输入错误：必须输入一个5位数字！")
 else:
-    # 检查是否为回文数（正向与反向一致）
-    if user_input == user_input[::-1]:
+    # 判断是否为回文数
+    if n == n[::-1]:  
         print("是回文数")
     else:
         print("不是回文数")
